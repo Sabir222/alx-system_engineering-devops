@@ -1,0 +1,35 @@
+# Understanding the Journey of a Web Request: From Address Bar to Server
+
+
+
+As users, we often take for granted the seemingly instantaneous results we get when we type a URL into our browser’s address bar and hit Enter. However, behind the scenes, a complex series of processes unfold to deliver the requested web page. In this article, we’ll delve into each step of this journey, shedding light on the intricate workings of the web stack.
+
+## DNS Request
+The journey begins when you type “https://www.google.com" into your browser. At this point, your browser initiates a Domain Name System (DNS) lookup to translate the human-readable domain name (www.google.com) into an IP address. DNS servers around the world work together to resolve the domain name to its corresponding IP address, enabling your browser to locate the server hosting the website.
+
+## TCP/IP
+Armed with the IP address obtained from the DNS lookup, your browser establishes a Transmission Control Protocol (TCP) connection with the server. TCP ensures reliable, ordered, and error-checked delivery of data between the client (your browser) and the server.
+
+The Internet Protocol (IP) comes into play to facilitate the routing of data packets across the internet. It ensures that the data packets reach their intended destination (the web server hosting google.com) by defining the addressing system and routing protocols.
+
+## Firewall
+As the data packets traverse the internet, they may encounter firewalls — a crucial component of network security. Firewalls monitor and control incoming and outgoing network traffic based on predetermined security rules. They act as a barrier between your device and potentially harmful external networks, safeguarding against unauthorized access and malicious activities.
+
+## HTTPS/SSL
+In today’s cyber landscape, securing data in transit is paramount. Hypertext Transfer Protocol Secure (HTTPS) encrypts the data exchanged between your browser and the web server, protecting it from interception or tampering by malicious entities.
+
+Secure Sockets Layer (SSL) or its successor, Transport Layer Security (TLS), establishes an encrypted connection between your browser and the server. This encryption ensures the confidentiality and integrity of the transmitted data, mitigating the risk of eavesdropping and data manipulation.
+
+## Load-Balancer
+To handle the vast volume of incoming requests efficiently, large-scale websites like Google employ load balancers. Load balancers distribute incoming traffic across multiple servers, ensuring optimal resource utilization and preventing any single server from becoming overwhelmed. This enhances the website’s performance, scalability, and reliability.
+
+## Web Server
+Upon receiving the request, the web server — such as Apache, Nginx, or Microsoft IIS — processes it and retrieves the requested web page or resource. The web server generates a response containing the requested content, which it then sends back to your browser over the established TCP/IP connection.
+
+## Application Server
+In cases where dynamic content is involved, the web server may communicate with an application server. The application server executes server-side scripts, processes database queries, and performs other tasks to generate personalized or data-driven content. This separation of concerns allows for greater flexibility and scalability in web application development.
+
+## Database
+For websites with dynamic content or user-specific data, databases play a pivotal role. The application server communicates with the database server to retrieve or manipulate data as needed. Whether it’s storing user profiles, managing product catalogs, or handling transactions, databases store and retrieve information crucial to the functioning of modern web applications.
+
+In conclusion, the journey of a web request from the address bar to the server encompasses a multitude of technologies and processes working seamlessly together. Understanding this intricate web stack empowers developers and engineers to build robust, secure, and scalable web applications that deliver exceptional user experiences.
